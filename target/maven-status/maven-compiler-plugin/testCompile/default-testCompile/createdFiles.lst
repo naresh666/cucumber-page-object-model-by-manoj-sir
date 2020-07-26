@@ -1,0 +1,8 @@
+com\steps\PersonalInformationPageStepDef.class
+com\steps\SigninPageStepDef.class
+com\steps\Steps.class
+com\steps\CreateAccountPageStepDef.class
+com\steps\MyAccoountPageStepDef.class
+com\steps\LandingPageStepDef.class
+com\steps\TestBaseStepDef.class
+com\runner\RunnerTest.class

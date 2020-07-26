@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>09 Jan 2020, 15:37</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.click_RegisterButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2317220632">2.317</td>
+              <td class="duration" data-value="2317220632">2.317</td>
+              <td class="duration" data-value="2317220632">2.317</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enterAddressandCity(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="478460432">0.478</td>
+              <td class="duration" data-value="478460432">0.478</td>
+              <td class="duration" data-value="478460432">0.478</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enter_AliasName(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="232386627">0.232</td>
+              <td class="duration" data-value="232386627">0.232</td>
+              <td class="duration" data-value="232386627">0.232</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enter_First_Name(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2471059055">2.471</td>
+              <td class="duration" data-value="2471059055">2.471</td>
+              <td class="duration" data-value="2471059055">2.471</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enter_Last_Name(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="435548249">0.435</td>
+              <td class="duration" data-value="435548249">0.435</td>
+              <td class="duration" data-value="435548249">0.435</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enter_Password(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="286426203">0.286</td>
+              <td class="duration" data-value="286426203">0.286</td>
+              <td class="duration" data-value="286426203">0.286</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enter_PhoneNumber(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="300550615">0.300</td>
+              <td class="duration" data-value="300550615">0.300</td>
+              <td class="duration" data-value="300550615">0.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.enter_Zipcode(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="272877610">0.272</td>
+              <td class="duration" data-value="272877610">0.272</td>
+              <td class="duration" data-value="272877610">0.272</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateAccountPageStepDef.selectState(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="212370694">0.212</td>
+              <td class="duration" data-value="212370694">0.212</td>
+              <td class="duration" data-value="212370694">0.212</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">LandingPageStepDef.click_Signin_Link()</td>
+              <td>2</td>
+              <td class="duration" data-value="4296259113">4.296</td>
+              <td class="duration" data-value="4296259113">7.071</td>
+              <td class="duration" data-value="8592518227">8.592</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyAccoountPageStepDef.user_click_my_personal_information_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="2179519359">2.179</td>
+              <td class="duration" data-value="2179519359">2.179</td>
+              <td class="duration" data-value="2179519359">2.179</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">MyAccoountPageStepDef.verifyUserName(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="130654466">0.130</td>
+              <td class="duration" data-value="130654466">0.130</td>
+              <td class="duration" data-value="130654466">0.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PersonalInformationPageStepDef.click_on_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="141811034">0.141</td>
+              <td class="duration" data-value="141811034">0.141</td>
+              <td class="duration" data-value="141811034">0.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PersonalInformationPageStepDef.use_enter_current_password(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="309430242">0.309</td>
+              <td class="duration" data-value="309430242">0.309</td>
+              <td class="duration" data-value="309430242">0.309</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PersonalInformationPageStepDef.user_enter_confoem_password(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="228490824">0.228</td>
+              <td class="duration" data-value="228490824">0.228</td>
+              <td class="duration" data-value="228490824">0.228</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PersonalInformationPageStepDef.user_enter_new_password(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="232284916">0.232</td>
+              <td class="duration" data-value="232284916">0.232</td>
+              <td class="duration" data-value="232284916">0.232</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SigninPageStepDef.Click_on_sign_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="2182540287">2.182</td>
+              <td class="duration" data-value="2182540287">2.182</td>
+              <td class="duration" data-value="2182540287">2.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SigninPageStepDef.click_Create_Account_Button()</td>
+              <td>1</td>
+              <td class="duration" data-value="163651681">0.163</td>
+              <td class="duration" data-value="163651681">0.163</td>
+              <td class="duration" data-value="163651681">0.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SigninPageStepDef.enter_Email_Address(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="13309458202">13.309</td>
+              <td class="duration" data-value="13309458202">13.309</td>
+              <td class="duration" data-value="13309458202">13.309</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SigninPageStepDef.user_enter_exsiting_emailaddress(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1472643473">1.472</td>
+              <td class="duration" data-value="1472643473">1.472</td>
+              <td class="duration" data-value="1472643473">1.472</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">SigninPageStepDef.user_enter_extisting_password(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="299904287">0.299</td>
+              <td class="duration" data-value="299904287">0.299</td>
+              <td class="duration" data-value="299904287">0.299</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestBaseStepDef.enter_Url()</td>
+              <td>2</td>
+              <td class="duration" data-value="21948925432">21.948</td>
+              <td class="duration" data-value="21948925432">32.423</td>
+              <td class="duration" data-value="43897850865">43.897</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestBaseStepDef.user_Launch_Browser()</td>
+              <td>2</td>
+              <td class="duration" data-value="4369465075">4.369</td>
+              <td class="duration" data-value="4369465075">4.835</td>
+              <td class="duration" data-value="8738930150">8.738</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>23</td>
+            <td>26</td>
+            <td class="duration">3.418</td>
+            <td class="duration">43.897</td>
+            <td class="duration">1:28.886</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
